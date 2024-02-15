@@ -1,27 +1,15 @@
-USE AdventureWorks2012
-
-SELECT ProductID, [Name], SellStartDate
-FROM Production.Product
-ORDER BY SellStartDate
-
-SELECT ProductID, [Name], SellStartDate
-FROM Production.Product
-ORDER BY [Name]
-
-SELECT ProductID, [Name], SellStartDate
-FROM Production.Product
-ORDER BY SellStartDate desc
-
-USE SchoolSchedulingExample
-
-SELECT *
-FROM Students
-ORDER BY StudLastName
-
-SELECT *
-FROM Students
-ORDER BY StudBirthDate
-
-SELECT *
-FROM Students
-ORDER BY StudState, StudBirthDate
+/*
+SELECT item FROM Orders 
+WHERE date ALL = (SELECT Order_ID FROM Orders
+WHERE quantity > 50)
+*/
+ 
+/* the SQL query below the will be executed 
+ignoring the text after "--"
+*/
+ 
+SELECT item -- single comment  
+FROM Orders -- another single comment
+WHERE id 
+ALL = (SELECT ID FROM Orders
+WHERE quantity > 25)
